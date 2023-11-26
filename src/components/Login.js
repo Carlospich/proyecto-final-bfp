@@ -5,10 +5,9 @@ import { useAuth } from '../contexts/AuthContext'
 import { Link } from "react-router-dom";
 
 
-export default function Signup() {
+export default function Login() {
     const emailRef = useRef()
     const passwordRef = useRef()
-    const passwordConfimRef = useRef()
     const { signup } = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
@@ -16,10 +15,6 @@ export default function Signup() {
     async function handleSubmit(e) {
         e.preventDefault()
 
-        if (passwordRef.current.value !== passwordConfimRef.current.value) {
-
-            return setError('Las contraseñas no coinciden')
-        }
         try {
             setError('')
             setLoading(true)
@@ -35,7 +30,7 @@ return (
     <>
         <Card>
             <Card.Body>
-                <h2 className="text-center mb-4">Registrarme</h2>
+                <h2 className="text-center mb-4">Iniciar Sesión</h2>
                 {error && <Alert variant="danger">{error}</Alert>}
                 <Form onSubmit={handleSubmit}>
                     <Form.Group id="email">
@@ -46,16 +41,13 @@ return (
                         <Form.Label>Contraseña</Form.Label>
                         <Form.Control type="password" ref={passwordRef} required />
                     </Form.Group>
-                    <Form.Group id="password-confirm">
-                        <Form.Label>Confirma tu contraseña</Form.Label>
-                        <Form.Control type="password" ref={passwordConfimRef} required />
-                    </Form.Group>
-                    <Button disabled={loading} className="w-100 mt-3" type="submit">Registrarme</Button>
+                    
+                    <Button disabled={loading} className="w-100 mt-3" type="submit">Iniciar Sesión</Button>
                 </Form>
             </Card.Body>
         </Card>
         <div className="W-100 text-center mt-2">
-            ¿Ya tienes una cuenta? <Link to="/login">Iniciar Sesión</Link>
+            ¿No tienes una cuenta aun? <Link to="/signup">Regístrate</Link>
         </div>
     </>
 )
