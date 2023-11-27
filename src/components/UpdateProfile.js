@@ -33,6 +33,7 @@ export default function UpdateProfile() {
 
         Promise.all(promises)
             .then(() => {
+                
                 navigate("/")
             }).catch(() => {
                 setError("Fallo al actualizar el perfil ")

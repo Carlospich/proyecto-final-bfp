@@ -1,7 +1,8 @@
 import React,{useState} from 'react'
-import {Alert, Button, Card} from 'react-bootstrap'
+import {Alert, Button, Card,Container} from 'react-bootstrap'
 import {Link, useNavigate} from 'react-router-dom' 
 import {useAuth} from '../contexts/AuthContext'
+import NavbarLibrary from './NavbarLibrary'
 
 export default function Dashboard() {
     const[error, setError]=useState('')
@@ -20,7 +21,10 @@ export default function Dashboard() {
 
     }
   return (
-    <>
+    
+    <>  <Container className='class="col-12"'>
+        <NavbarLibrary/>
+        </Container>
         <Card>
         <Card.Body>
           <h2 className='text-center mb-4'>Perfil</h2>  
