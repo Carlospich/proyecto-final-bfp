@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { db } from '../firebase';
+import "bootstrap/dist/css/bootstrap.min.css"
+import { Button } from 'react-bootstrap'
 
 const AddBook = () => {
   const [newBook, setNewBook] = useState({ title: '', author: '' , genre:'', year:''});
@@ -38,18 +40,18 @@ const AddBook = () => {
       <input
         type="text"
         placeholder="Genero"
-        name="author"
-        value={newBook.author}
+        name="genre"
+        value={newBook.genre}
         onChange={handleInputChange}
       />
       <input
         type="text"
         placeholder="Año de publicación"
-        name="author"
-        value={newBook.author}
+        name="year"
+        value={newBook.year}
         onChange={handleInputChange}
       />
-      <button onClick={handleAddBook}>Agregar Libro</button>
+      <Button className="w-100 mt-3" onClick={handleAddBook}>Agregar Libro</Button>
     </div>
   );
 };
