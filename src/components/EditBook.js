@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import firebase from '../firebase';
+import { Button } from 'react-bootstrap';
 
 const EditBook = ({ book, closeModal }) => {
   const [editedBook, setEditedBook] = useState(book);
@@ -53,8 +54,8 @@ const EditBook = ({ book, closeModal }) => {
           value={editedBook.year}
           onChange={handleInputChange}
         />
-        <button onClick={handleUpdateBook}>Actualizar</button>
-        <button onClick={closeModal}>Cancelar</button>
+        <Button onClick={handleUpdateBook}>Actualizar</Button>
+        <Button onClick={closeModal}>Cancelar</Button>
       </form>
     </div>
   );
