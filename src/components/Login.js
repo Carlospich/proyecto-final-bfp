@@ -28,9 +28,9 @@ export default function Login() {
   
 
 return (
-    <><Container className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}
+    <><Container className="d-flex align-items-center justify-content-center mt-1" style={{ minHeight: "100vh" }}
     >
-      <div className="w-100" style={{ maxWidth: '550px' }}>
+      <div className="w-100 mt-1" style={{ maxWidth: '550px' }}>
         <Card>
             <Card.Body>
                 <h2 className="text-center mb-4">Iniciar Sesión</h2>

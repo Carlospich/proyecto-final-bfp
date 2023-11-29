@@ -1,6 +1,5 @@
 import React from "react";
 import Signup from "./Signup";
-import { Container } from "react-bootstrap";
 import { AuthProvider } from "../contexts/AuthContext";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./Login";
@@ -13,11 +12,12 @@ import SearchBook from "./SearchBook";
 import { DatabaseProvider } from "../contexts/DatabaseContext";
 import ListBooks from "./ListBooks";
 
+
 function App() {
   return (
     <AuthProvider>
     <DatabaseProvider>
-      
+   
           <Router>
             <Routes>
               <Route path="/signup" element={<Signup />} />
@@ -30,7 +30,7 @@ function App() {
               <Route path="/list-books" element={<ListBooks/>}/>
             </Routes>
           </Router>
-
+       
        
       </DatabaseProvider>
     </AuthProvider>

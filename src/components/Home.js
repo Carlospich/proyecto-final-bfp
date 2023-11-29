@@ -3,6 +3,8 @@ import firebase from '../firebase';
 
 
 import EditBook from './EditBook';
+import NavbarLibrary from './NavbarLibrary';
+import ListBooks from './ListBooks';
 
 const Home = () => {
   const [books, setBooks] = useState([]);
@@ -28,16 +30,13 @@ const Home = () => {
   
 
   return (
-    <div>
+    <>
+      <NavbarLibrary/>
+      <div style={{ marginTop: '50px' }}>
+      <ListBooks/>
       
-      
-      {selectedBook && (
-        <EditBook
-          book={selectedBook}
-          closeModal={() => setSelectedBook(null)}
-        />
-      )}
-    </div>
+      </div>
+    </>
   );
 };
 export default Home;
