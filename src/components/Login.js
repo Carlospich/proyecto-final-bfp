@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Form, Button, Card, Alert } from 'react-bootstrap'
+import { Form, Button, Card, Alert,Container } from 'react-bootstrap'
 import "bootstrap/dist/css/bootstrap.min.css"
 import { useAuth } from '../contexts/AuthContext'
 import { Link , useNavigate} from "react-router-dom";
@@ -28,7 +28,9 @@ export default function Login() {
   
 
 return (
-    <>
+    <><Container className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}
+    >
+      <div className="w-100" style={{ maxWidth: '550px' }}>
         <Card>
             <Card.Body>
                 <h2 className="text-center mb-4">Iniciar Sesión</h2>
@@ -53,6 +55,8 @@ return (
         <div className="W-100 text-center mt-2">
             ¿No tienes una cuenta aún? <Link to="/signup">Regístrate</Link>
         </div>
+        </div>
+        </Container>
     </>
 )
 }

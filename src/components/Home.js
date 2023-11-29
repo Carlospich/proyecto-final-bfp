@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import firebase from '../firebase';
-import BookList from './BookList';
-import NavigationBar from './NavigationBar';
+
+
 import EditBook from './EditBook';
 
 const Home = () => {
@@ -24,23 +24,13 @@ const Home = () => {
     };
   }, []);
 
-  const handleEditBook = (book) => {
-    setSelectedBook(book); 
-  };
-
-  const handleDeleteBook = (id) => {
-    const bookRef = firebase.database().ref(`books/${id}`);
-    bookRef.remove();
-  };
+ 
+  
 
   return (
     <div>
-      <NavigationBar />
-      <BookList
-        books={books}
-        handleEdit={handleEditBook}
-        handleDelete={handleDeleteBook}
-      />
+      
+      
       {selectedBook && (
         <EditBook
           book={selectedBook}

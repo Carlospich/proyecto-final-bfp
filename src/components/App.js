@@ -10,28 +10,29 @@ import UpdateProfile from "./UpdateProfile";
 import Home from "./Home"
 import AddBook from "./AddBook"
 import SearchBook from "./SearchBook";
+import { DatabaseProvider } from "../contexts/DatabaseContext";
+import ListBooks from "./ListBooks";
 
 function App() {
   return (
     <AuthProvider>
-      <Container className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}
-      >
-        <div className="w-100" style={{ maxWidth: '550px' }}>
+    <DatabaseProvider>
+      
           <Router>
             <Routes>
               <Route path="/signup" element={<Signup />} />
               <Route path="/login" element={<Login />} />
               <Route path="/" element={<PrivateRoute> <Home /> </PrivateRoute>}/>
-              <Route path="/AddBook" element={<AddBook />} />
+              <Route path="/add-book" element={<AddBook />} />
               <Route path="/search" element={<SearchBook />} />
               <Route path="/update-profile" element={<PrivateRoute> <UpdateProfile /> </PrivateRoute>}/>
               <Route path="/forgot-password" element={<ForgotPassword/>}/>
+              <Route path="/list-books" element={<ListBooks/>}/>
             </Routes>
           </Router>
 
-        </div>
-
-      </Container>
+       
+      </DatabaseProvider>
     </AuthProvider>
   )
 }
