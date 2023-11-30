@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# Proyecto Final Desarrollo Web con ReactJS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Aplicación de Gestión de Libros con React y Firebase
 
-## Available Scripts
+Juan Camilo Barrera Paredes - 0000226374
+Luis Ignacio Forero Molina - 0000224778
+Carlos Santiago Piza Choachi - 0000227586
 
-In the project directory, you can run:
+## Descripción del Proyecto
 
-### `npm start`
+La aplicación de Gestión de Libros permite a los usuarios realizar operaciones CRUD en una biblioteca virtual. Los usuarios pueden realizar las siguientes operaciones:
+- Registrar nuevos libros especificando título, autor, género y año de publicación.
+- Buscar libros por título o autor en la biblioteca.
+- Actualizar la información de los libros existentes.
+- Eliminar libros de la biblioteca.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+La aplicación utiliza Firebase para almacenar y gestionar los datos de los libros de manera segura y eficiente.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Requisitos Funcionales
 
-### `npm test`
+### Autenticación de Usuarios
+- **Registro de Usuario:** Los usuarios pueden registrarse proporcionando información básica y una contraseña segura.
+- **Inicio de Sesión:** Iniciar sesión utilizando las credenciales registradas.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Gestión de Libros
+- **Agregar Libro:** Los usuarios pueden agregar nuevos libros especificando título, autor, género y año de publicación.
+- **Búsqueda de Libros:** Los usuarios pueden buscar libros por título o autor en la biblioteca y ver los resultados correspondientes.
+- **Actualizar Información de Libro:** Los usuarios pueden actualizar la información de los libros existentes, incluyendo título, autor, género y año de publicación.
+- **Eliminar Libro:** Los usuarios pueden eliminar libros de la biblioteca según sea necesario.
 
-### `npm run build`
+## Instalación
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clona este repositorio.
+2. Instala las dependencias con `npm install`.
+3. Inicia la aplicación con `npm start`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tecnologías Utilizadas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React
+- Firebase (Realtime Database)
+- React Bootstrap
+- React Router DOM
