@@ -2,9 +2,9 @@
 
 ## Aplicación de Gestión de Libros con React y Firebase
 
-Juan Camilo Barrera Paredes - 0000226374
-Luis Ignacio Forero Molina - 0000224778
-Carlos Santiago Piza Choachi - 0000227586
+- Juan Camilo Barrera Paredes - 0000226374
+- Luis Ignacio Forero Molina - 0000224778
+- Carlos Santiago Piza Choachi - 0000227586
 
 ## Descripción del Proyecto
 
