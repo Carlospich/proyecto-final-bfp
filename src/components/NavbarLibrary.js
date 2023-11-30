@@ -32,7 +32,7 @@ export default function NavbarLibrary() {
   return (
     <Navbar bg="primary" variant="dark">
       <Container>
-        <Navbar.Brand onClick={() => navigate('/')}  style={{ cursor: 'pointer' }}>Libreria</Navbar.Brand>
+        <Navbar.Brand onClick={() => navigate('/')}  style={{ cursor: 'pointer' }}>Libreria BFP</Navbar.Brand>
 
         <div className="d-flex align-items-center">
          
