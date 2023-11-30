@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react';
-import { db } from '../firebase';
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Button, Card, Form, Alert, Container } from 'react-bootstrap'
 import { useDatabase } from '../contexts/DatabaseContext';

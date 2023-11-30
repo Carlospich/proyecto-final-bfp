@@ -1,7 +1,8 @@
 import React,{useState} from 'react'
-import {Alert, Button, Card} from 'react-bootstrap'
+import {Alert, Button, Card,Container} from 'react-bootstrap'
 import {Link, useNavigate} from 'react-router-dom' 
 import {useAuth} from '../contexts/AuthContext'
+import NavbarLibrary from './NavbarLibrary'
 
 export default function Dashboard() {
     const[error, setError]=useState('')
@@ -21,6 +22,12 @@ export default function Dashboard() {
     }
   return (
     <>
+    <NavbarLibrary/>
+    <Container
+        className="d-flex align-items-center justify-content-center"
+        style={{ minHeight: "100vh" }}
+      >
+        <div className="w-100" style={{ maxWidth: "550px" }}>
         <Card>
         <Card.Body>
           <h2 className='text-center mb-4'>Perfil</h2>  
@@ -31,8 +38,10 @@ export default function Dashboard() {
 
         </Card>
         <div className='w-100 text-center mt-2'>
-           <Button varian="link" onClick={handleLogout}>Cerrar Sesión</Button>
+           <Button variant="link" onClick={handleLogout}>Cerrar Sesión</Button>
         </div>
+        </div>
+        </Container>
     </>
   )
 }

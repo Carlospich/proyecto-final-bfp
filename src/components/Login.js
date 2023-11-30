@@ -19,7 +19,7 @@ export default function Login() {
             setError('')
             setLoading(true)
             await login(emailRef.current.value, passwordRef.current.value)
-            navigate("/Home")
+            navigate("/")
         } catch {
             setError('Fallo al iniciar sesión')
         }

@@ -70,7 +70,7 @@ export default function UpdateProfile() {
                 </Card.Body>
             </Card>
             <div className="W-100 text-center mt-2">
-                <Link to="/">Cancelar</Link>
+                <Link to="/dashboard">Cancelar</Link>
             </div>
             </div>
             </Container>

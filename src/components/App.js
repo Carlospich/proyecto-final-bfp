@@ -8,11 +8,10 @@ import ForgotPassword from "./ForgotPassword"
 import UpdateProfile from "./UpdateProfile";
 import Home from "./Home"
 import AddBook from "./AddBook"
-import SearchBook from "./SearchBook";
 import { DatabaseProvider } from "../contexts/DatabaseContext";
 import ListBooks from "./ListBooks";
-
-
+import BookDetails from "./BookDetails";
+import Dashboard from "./Dashboard";
 function App() {
   return (
     <AuthProvider>
@@ -23,11 +22,12 @@ function App() {
               <Route path="/signup" element={<Signup />} />
               <Route path="/login" element={<Login />} />
               <Route path="/" element={<PrivateRoute> <Home /> </PrivateRoute>}/>
-              <Route path="/add-book" element={<AddBook />} />
-              <Route path="/search" element={<SearchBook />} />
+              <Route path="/add-book" element={<PrivateRoute><AddBook /></PrivateRoute>} />
               <Route path="/update-profile" element={<PrivateRoute> <UpdateProfile /> </PrivateRoute>}/>
               <Route path="/forgot-password" element={<ForgotPassword/>}/>
-              <Route path="/list-books" element={<ListBooks/>}/>
+              <Route path="/list-books" element={<PrivateRoute><ListBooks/></PrivateRoute>}/>
+              <Route path="/books/:id" element={<PrivateRoute><BookDetails/></PrivateRoute>}/>
+              <Route path="/dashboard" element={<PrivateRoute><Dashboard/></PrivateRoute>}/>
             </Routes>
           </Router>
        
@@ -36,5 +36,6 @@ function App() {
     </AuthProvider>
   )
 }
+
 
 export default App;
