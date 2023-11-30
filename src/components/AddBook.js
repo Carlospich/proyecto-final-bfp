@@ -82,7 +82,7 @@ const AddBook = () => {
                         </Card.Body>
                     </Card>
                     <div className="W-100 text-center mt-2">
-                        ¿No tienes una cuenta aún? <Link to="/">Volver</Link>
+                        <Link to="/">Volver</Link>
                     </div>
 
                 </div>
