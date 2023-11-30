@@ -35,7 +35,10 @@ export default function NavbarLibrary() {
         <Navbar.Brand onClick={() => navigate('/')}  style={{ cursor: 'pointer' }}>Libreria BFP</Navbar.Brand>
 
         <div className="d-flex align-items-center">
-         
+            <Nav>
+              <Nav.Link onClick={() => navigate('/add-book')}>Agregar libro</Nav.Link>
+            
+            </Nav>
         
             <Dropdown >
               <Dropdown.Toggle variant="primary" id="user-dropdown">
@@ -43,6 +46,7 @@ export default function NavbarLibrary() {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
+              
                 <Dropdown.Item onClick={() => navigate('/dashboard')}>Mi perfil</Dropdown.Item>
                 <Dropdown.Item onClick={handleLogout}>Cerrar Sesión</Dropdown.Item>
               </Dropdown.Menu>

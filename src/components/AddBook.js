@@ -2,6 +2,8 @@ import React, { useRef, useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css"
 import { Button, Card, Form, Alert, Container } from 'react-bootstrap'
 import { useDatabase } from '../contexts/DatabaseContext';
+import { useNavigate } from 'react-router-dom/dist';
+import NavbarLibrary from './NavbarLibrary';
 const AddBook = () => {
     const titleRef = useRef()
     const authorRef = useRef()
@@ -11,6 +13,7 @@ const AddBook = () => {
     const [error, setError] = useState('')
     const { addBook } = useDatabase()
     const [message,setMessage] =useState('')
+    const navigate = useNavigate()
 
     async function handleSubmit(e) {
         e.preventDefault();
@@ -33,6 +36,7 @@ const AddBook = () => {
             reader.readAsDataURL(imageFile);
             setError('')
             setMessage('Libro subido con exito')
+            navigate("/")
         } catch {
             setError('Fallo al añadir libro');
             setMessage('')
@@ -40,7 +44,8 @@ const AddBook = () => {
     }
 
     return (
-        <><Container className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}
+        <><NavbarLibrary></NavbarLibrary>
+        <Container className="d-flex align-items-center justify-content-center" style={{ minHeight: "100vh" }}
         >
           <div className="w-100" style={{ maxWidth: '550px' }}>
             <Card>
